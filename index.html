@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="jquery.mask.min.js"></script>     
+
+    <!--<title>Envio e Registro de Clientes</title>-->
+</head>
+<body>
+    
+  
+ 
+  
+    <div class="container">        
+      <div class="forms">
+
+
+            <div class="form login">
+                <span class="title">Enviar</span>
+                
+                <form  id="form1" method="POST" action="functions.php">
+                    <div class="input-field">
+                        
+                      <input type="text" class="cpf" id="Eid" name="Eid" placeholder="Digite o seu CPF ou CNPJ" required>
+                      
+                      <i class="uil-user icon"></i>
+                        
+                        
+                    </div>
+                    <div class="input-field">
+                     
+                       <input type="text" class="cpf" name="Eid2" id="Eid2" placeholder="Digite CPF ou CNPJ para envio" required>
+                        <i class="uil-user-arrows icon"></i>
+                        
+                    </div>
+
+                    <div class="input-field">
+                        <input type="number" class="cpf" name="Evalor" id="Evalor"   placeholder="Digite o Valor  que deseja enviar" required>
+                        <i class="uil-money-withdraw icon"></i>
+                    </div>
+
+                    
+
+                    <div class="input-field button">
+                       
+                        <input type="submit"  id="enviaDados" form="form1" value="Enviar" name="enviar">
+                    </div>
+                </form>
+
+                <div class="login-signup">
+                    <span class="text">Não tem cadastro?
+                        <a href="#" class="text signup-link">Inscreva-se</a>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Formulario de Registro -->
+            <div class="form signup">
+                <span class="title">Registrar</span>
+
+                <form method="POST" action="functions.php" >
+                    <div class="input-field">
+                        <input type="text"  class="cpf" name="name" placeholder="Digite o seu nome Completo" required>
+                        <i class="uil uil-user"></i>
+                    </div>
+
+                    <div class="input-field">
+                      <input type="number"  class="cpf" name="id" autocomplete="off" placeholder="Digite o seu CPF ou CNPJ" required>
+                      <i class="uil uil-user"></i>
+                  </div>
+
+                    
+
+                    <div class="input-field">
+                        <input type="email"  class="cpf" name="email" placeholder="Digite o seu email" required>
+                        <i class="uil uil-envelope icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="password"  class="cpf" autocomplete="off" name="senha" placeholder="Digite sua senha" required>
+                        <i class="uil uil-lock icon"></i>
+                    </div>
+                    
+
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                          <h3>oque você é ? </h3> 
+                            <input type="radio" id="radio-pessoa" name="categoria" value="Pessoa"  required>
+                            <label for="termCon" class="text">Pessoa</label>
+                            <input type="radio" id="termCon"  name="categoria" value="Empresa" >
+                            <label for="termCon" class="text" >Empresa</label>
+                        </div>
+                    </div>
+
+                    <div class="input-field button">
+                        <input type="submit" name="submit" value="Enviar">
+                    </div>
+                </form>
+
+                <div class="login-signup">
+                    <span class="pergunta">Já tem cadastro?
+                        <a href="#" class="text login-link">Realizar tranzação</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+	<script src="jquery-3.5.1.min.js"></script>
+	<script src="script.js"></script>
+   
+	
+
+
+
+  
+  
+  <!-- Modal Para Transacao -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"><img src="imagens/pic-pay-icon.png"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h4> Transação realiza com sucesso!!!! </h4>
+          
+
+
+          <h5> Verifique sua caixa de mensagens </h5>
+          <h6> Ver historico de transações: <a href="https://www.w3schools.com/" target="_blank">Clique aqui</a>
+          </h6>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+ <!-- Modal Para Cadastro -->
+ <div class="modal fade" id="CadastroModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"><img src="imagens/pic-pay-icon.png"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h4> Cadastrado com sucesso!!! </h4>
+        
+        <h5> Agora você está habilitado para fazer transações </h5>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+ <!-- Modal Para Cadastro  Com falha-->
+ <div class="modal fade" id="CadastroModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"><img src="imagens/pic-pay-icon.png"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          
+          <h4 id="Miranda"> Infelizmente esse registro já possui dono  </h4>
+          
+          <h5> Tente outro por favor </h5>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+ <!-- Modal Inexistente -->
+ <div class="modal fade" id="ModalI" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"><img src="imagens/pic-pay-icon.png"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      
+      <div class="modal-body" >
+        <h5> Infelizmente algum dos dados digitados  Não existe ,Você não é uma pessoa fisica? Verifique se possui saldo na sua conta também </h5>
+        
+        <h6> Tente outro por favor </h6>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    
+</body>
+</html>
